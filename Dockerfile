@@ -1,5 +1,4 @@
-FROM harbor.lpx.com/proxy/library/python:3.9.16-bullseye
-#COPY pip.conf /root/.pip/pip.conf
+FROM python:3.9.16-bullseye
 WORKDIR /root
 RUN  pip3 install --upgrade pip \
      && pip install --upgrade python-gitlab==3.13.0
