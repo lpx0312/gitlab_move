@@ -106,7 +106,8 @@ item_ssh_port = 2022
     docker run -itd --name=gitlab-python -v $(pwd):/root/ gitlab-python:3.13.0
 ```
 
-## 四、并且执行脚本
+## 四、执行脚本进行数据迁移
+- 也可以进入容器，进行执行
 ```bash
     docker exec -t gitlab-python  python gitlab_move.py
 ```
