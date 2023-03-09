@@ -8,12 +8,12 @@ import os
 import configparser
 from logone import Logger
 # 配置
+current_dir = os.getcwd()
 config = configparser.ConfigParser()
-config.read('.gitlab_move.cfg', encoding='utf-8')
+config.read('{0}/.gitlab_move.cfg'.format(current_dir), encoding='utf-8')
 git_move_log_name = config.get('move-setting', 'log_path')
 # 日志
 logger = Logger()
-current_dir = os.getcwd()
 git_move_log_path = '{0}/{1}'.format(current_dir,git_move_log_name)
 if os.path.exists(git_move_log_path):
     old_log_name = '{0}/{1}'.format(current_dir,"".join([git_move_log_name.split('.')[0],"-"
