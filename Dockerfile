@@ -6,5 +6,4 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list \
     && apt-get clean \
     && apt-get update \
     && apt-get install -y vim tree
-COPY . .
 CMD ["/bin/bash"]
